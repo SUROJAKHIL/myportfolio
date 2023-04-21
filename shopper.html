@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        header{
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            font-size: 20px;
+        }
+        .brand-title{
+            font-size: 30px;
+        }
+        .second-title{
+            margin-top: 10px;
+            margin-right: 20px;
+            margin: 10px;
+            padding: 10px;
+        }
+        .sub-footer{
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+        .third-title{
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+        .women-title{
+            background-image: url(../public/images/women2.jpg);
+            width: 400px;
+            height: 500px;
+            background-size: cover;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            color: white;
+            opacity: 0.6;
+           
+
+        }
+        .women-title:hover{
+            opacity: 1;
+        }
+        .men-title{
+            background-image: url(./public/images/men3.jpeg);
+            width: 400px;
+            height: 500px;
+            background-size: cover;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            justify-content: space-evenly;
+            opacity: 0.6;
+        }
+        .men-title:hover{
+            opacity: 1;
+        }
+        .kids-title{
+            background-image: url(./public/images/kids4.jpeg);
+            width: 400px;
+            height: 500px;
+            background-size: cover;
+            text-align: center;
+            justify-content: space-evenly;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            opacity: 0.6;
+        }
+        .kids-title:hover{
+            opacity: 1;
+        }
+        .brand-image{
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            margin-left: 50px;
+        }
+        h4{
+            font-size: 50px;
+        }
+        button{
+            background-color: white;
+            color: black;
+            width: 200px;
+            height: 40px;
+            border: none;
+            align-items: center;
+        }
+        section{
+            height: 100%;
+            width: 100%;
+        }
+        .brand-border{
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+        }
+        .color{
+            color: grey;
+        }
+        .new-collection{
+            text-align: center;
+            color: gray;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .new-collection2{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-weight: bold;
+            font-size: 70px;
+        }
+        .new-collection3{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .women3{
+            background-image: url(../public/images/women3.jpg);
+            width: 500px;
+            height: 500px;
+            background-size: cover;
+            margin-left: 80px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            justify-content: space-evenly;
+            transform: translateX(0px);
+            transition: 1s;
+        }
+        .women3:hover{
+          transform: translateX(8px);
+            transition: 1s;
+        }
+        .women4{
+            background-image: url(../public/images/women6.jpg);
+            width: 500px;
+            height: 500px;
+            background-size: cover;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            color: white;
+            transform: translateX(0px);
+            transition: 1s;
+        }
+        .women4:hover{
+            transform: translateX(-8px);
+            transition: 1s;
+        }
+        .nav{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        .section-banners{
+            display: flex;
+            justify-content: space-between;
+        }
+        .chappalBanner{
+            background-image: url(./public/images/women18.jpg);
+            width: 1600px;
+            height: 300px;
+            background-size: cover;
+            color: white;
+        }
+        .finalBanner{
+            background-color: rgb(229, 218, 226);
+            width: 1600px;
+            height: 500px;
+            background-size: cover;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .images{
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+        .footer{
+            background-color: rgb(25, 41, 41);
+            color: whitesmoke;
+            width: 1500px;
+            height: 600px;
+
+        }
+        .buttonText{
+            align-items: center;
+            text-align: center;
+        }
+        .mainFooter{
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        
+        
+
+        
+
+    </style>
+</head>
+<body class="container-fluid">
+    <header>
+          
+    <div class="brand-title">
+            shopper.
+        </div>
+        <div class="second-title">
+            <span>home</span>
+            <span>catlog</span>
+            <span>shop</span>
+            <span>pages</span>
+            <span>blog</span>
+        </div>
+        <div class="third-title">
+            <span class="bi bi-search"></span>
+            <span class="bi bi bi-person"></span>
+            <span class="bi bi bi-heart"></span>
+            <span class="bi bi bi-shop"></span>
+        </div>
+    </header>
+    <div>
+    <div class="sub-footer">
+        <span class="bi bi-lightning-fill text-warning"></span>HAPPY HOLIDAY DEALS ON EVERYTHING<span class="bi bi-lightning-fill text-warning"></span>
+    </div>
+    <br>
+    <div class="brand-image">
+    <div class="women-title">
+        <h4>women's</h4>
+        <div>
+            <button>shop womens <span class="bi bi-arrow-right"></span></button>
+        </div>
+    </div>
+    <div class="men-title">
+        <h4>men's</h4>
+        <div>
+            <button>shop mens <span class="bi bi-arrow-right"></span></button>
+        </div>
+    </div>
+    <div class="kids-title">
+       <h4>kid's</h4>
+       <div>
+       <button>shop kids <span class="bi bi-arrow-right"></span></button>
+</div>
+    </div>
+</div>
+<br>
+
+<section>
+    <div class="brand-border">
+<div>
+<span class="bi bi bi-minecart-loaded"><h6>FREE SHIPPING</h6></span>
+<span class="color">From all orders over $100</span>
+
+</div>
+<div>
+<span class="bi bi-arrow-return-right"><h6>FREE RETURNS</h6></span>
+<span class="color">Return money within 30 days</span>
+
+</div>
+<div>
+<span class="bi bi-shop"><h6>SECURE SHOPPING</h6></span>
+<span class="color">You're in safe hands</span>
+</div>
+<div>
+<span class="bi bi bi-lock"><h6>OVER 10,000 STYLES</h6></span>
+<span class="color">We have everything you need</span>
+</div>
+    </div>
+    <br>
+    <br>
+    <div>
+        <span class="new-collection">NEW COLLECTION</span>
+        <br>
+        <span class="new-collection2"><h2>Best Picks 2019</h2></span>
+        <br>
+        <span class="new-collection3">Appear, dry there darkness they're seas, dry waters thing fly midst. Beast, above fly brought Very green.</span>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="nav" style="margin-right: 40px; display: ;">
+    <div class="women3">
+        <h1>modern wear</h1>
+        <div>
+            <button> shop now <span class="bi bi bi-arrow-right"></span></button>
+        </div>
+    </div>
+    <div class="women4">
+        <h1>traditional wear</h1>
+        <div>
+        <button> shop now <span class="bi bi bi-arrow-right"></span></button>
+    </div>
+    </div>
+</div>
+</section>
+<br><br>
+<div style="align-items: center; text-align: center;">
+    <h1 style="text-align:center">top month sellers</h1>
+    <br>
+    <div style="align-items: center; text-align: center; font-size: 30px; color: gray;">
+        <span>men</span><br><span>women</span><br><span>kids</span>
+    </div>
+</div>
+<br><br>
+      <div class="section-banners">
+        <div>
+        <img src="./public/images/women12.jpg" width="300" height="400">
+        <p>Shoes<br>
+            Leather mid-heel Sandals<br>
+            $129.00</p>
+    </div>
+    <div>
+        <img src="./public/images/women3.jpg" width="300" height="400">
+        <p>Dresses<br>
+            Cotton floral print Dress<br>
+            $40.00</p>
+    </div>
+    <div>
+        <img src="./public/images/women13.jpg" width="300" height="400">
+        <p>Shoes<br>
+            Leather Sneakers<br>
+             $85.00</p>
+    </div>
+    <div>
+        <img src="./public/images/women7.jpg" width="300" height="400">
+        <p>Tops<br>
+            Cropped cotton Top<br>
+            $29.00</p>
+    </div>
+      </div>
+      <br><br> 
+      <div class="section-banners">
+        <div>
+        <img src="./public/images/women8.jpg" width="300" height="400">
+        <p>Dresses<br>
+            Floral print midi Dress<br>
+            $50.00</p>
+    </div>
+    <div>
+        <img src="./public/images/women4.jpg" width="300" height="400">
+        <p>Bags<br>
+            Suede cross body Bag<br>
+            $79.00 </p>
+    </div>
+    <div>
+        <img src="./public/images/women10.jpg" width="300" height="400">
+        <p>Bags<br>
+            Suede cross body Bag<br>
+             $49.00</p>
+    </div>
+    <div>
+        <img src="./public/images/women11.jpg" width="300" height="400">
+        <p>Shoes<br>
+            Heel strappy Sandals<br>
+            $90.00</p>
+    </div>
+      </div> 
+      <br><br> 
+      <div style="align-items: center; font-size: 20px; text-align: center;">
+        <p style="font-size: 20px; font-family: Arial, Helvetica, sans-serif;;">discover more</p>
+        <br>
+      </div> 
+      <div class="chappalBanner">
+        <img>
+      </div>
+      <br><br> 
+      <div class="finalBanner">
+        <br><br>
+          <p style="font-size: 30px; align-items: center; text-align: center;">@SHOPPER</p>
+          <br>
+          <p style="color: black; align-items: center; text-align: center; font-family: Arial, Helvetica, sans-serif;">Appear, dry there darkness they're seas, dry waters</p>
+          <br><br>
+          <div class="images">
+            <img src="./public/images/p1.jpg" width="200" height="200">
+            <img src="./public/images/p2.jpg" width="200" height="200">
+            <img src="./public/images/p3.jpg" width="200" height="200">
+            <img src="./public/images/p4.jpg" width="200" height="200">
+            <img src="./public/images/p5.jpg" width="200" height="200">
+            <img src="./public/images/p6.jpg" width="200" height="200">
+          </div>    
+      </div>
+      <footer>
+        <div class="footer">
+            <br><br>
+            <p style="color: white; text-align: center; align-items: center; font-size: 30px;">Want style Ideas and Treats?</p>
+            <br> 
+            <div class="buttonText">
+                <input type="text" class="form-control-lg"><button class="btn btn-dark">subscribe</button>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="mainFooter">
+                <div>
+                    <p style="font-size: 30px;">shopper</p>
+                    <span class="bi bi-facebook"></span>
+                    <span class="bi bi-youtube"></span>
+                    <span class="bi bi-instagram"></span>
+                    <span class="bi bi-twitter"></span>
+                    <span class="bi bi-linkedin"></span>
+                </div>
+                <div>
+                    <p style="font-size: 20px;">SUPPORT</p>
+                    <ul>
+                        <li>contact us</li>
+                        <li>faQ</li>
+                        <li>size guide</li>
+                        <li>shipping and returns</li>
+                    </ul>
+                </div>
+                    <div>
+                        <p style="font-size: 20px;">SHOP</p>
+                        <ul>
+                            <li>Men's Shopping</li>
+                            <li>Women's Shopping</li>
+                            <li>Kids' Shopping</li>
+                            <li>discounts</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p style="font-size: 20px;">COMPANY</p>
+                        <ul>
+                            <li>Our Story</li>
+                            <li>Careers</li>
+                            <li>Terms & Conditions</li>
+                            <li>Privacy & Cookie policy</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul><p style="font-size: 20px;">CONTACT</p>
+                            <li>1-202-555-0105</li>
+                            <li>1-202-555-0106</li>
+                            <li>1-202-555-0107</li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        
+      </footer>
+</body>
+</html>
